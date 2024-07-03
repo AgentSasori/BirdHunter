@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf6k07pve7lef"]
+
+[ext_resource type="Texture2D" uid="uid://bu2evhvv8hkku" path="res://assets/shotgun_shell_by_motoast_d4wkxlq-375w-2x.png" id="1_y5pvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbmla"]
+size = Vector2(54, 127)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="Shotgun_Shell" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_y5pvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-21, 2.5)
+shape = SubResource("RectangleShape2D_gbmla")

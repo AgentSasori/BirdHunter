@@ -1,0 +1,10 @@
+Timer
+RichTextLabel
+Label
+RigidBody2D
+Sprite2D
+TextureRect
+CanvasLayer
+Button
+Camera2D
+HBoxContainer

@@ -1,0 +1,147 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2e65dh8oj38c"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_phrap"]
+[ext_resource type="Texture2D" uid="uid://crlfruneu1hsi" path="res://assets/bird-hunter-logo.jpeg" id="2_leidd"]
+[ext_resource type="AudioStream" uid="uid://d3vcu5gjqrulp" path="res://assets/Chicken Hunt.mp3" id="3_7wm8n"]
+[ext_resource type="PackedScene" uid="uid://b8n1ltvv7yqna" path="res://scenes/parallax_background.tscn" id="4_65r3q"]
+
+[node name="Mainmenu" type="Node2D"]
+script = ExtResource("1_phrap")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1070.0
+offset_bottom = 1079.0
+texture = ExtResource("2_leidd")
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+offset_left = 1248.0
+offset_top = 344.0
+offset_right = 1703.0
+offset_bottom = 527.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 128
+text = " START "
+
+[node name="Exit" type="Button" parent="CanvasLayer"]
+offset_left = 1248.0
+offset_top = 600.0
+offset_right = 1703.0
+offset_bottom = 783.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 48
+text = "I dont kill birds!"
+
+[node name="Creditstext" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 160.0
+offset_top = 959.0
+offset_right = 927.0
+offset_bottom = 1047.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="Gameover" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 136.0
+offset_top = -1058.0
+offset_right = 936.0
+offset_bottom = -758.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(1, 0.129412, 0, 0.439216)
+
+[node name="BirdsWon" type="Label" parent="CanvasLayer/Gameover"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -399.0
+offset_top = 2.0
+offset_right = 401.0
+offset_bottom = 134.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 96
+text = "The Birds won!"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="CanvasLayer/Gameover"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -90.0
+offset_right = 282.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Score:"
+
+[node name="Birds" type="Label" parent="CanvasLayer/Gameover"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = -178.0
+offset_right = -110.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Birds:"
+
+[node name="Kills" type="Label" parent="CanvasLayer/Gameover"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -178.0
+offset_right = 282.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Kills:"
+
+[node name="Shots" type="Label" parent="CanvasLayer/Gameover"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -392.0
+offset_top = -90.0
+offset_right = -110.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Shots:"
+
+[node name="Titlesong" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7wm8n")
+autoplay = true
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("4_65r3q")]
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Exit" to="." method="_on_exit_pressed"]

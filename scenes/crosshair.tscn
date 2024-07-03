@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://1sevu7xf375x"]
+
+[ext_resource type="Texture2D" uid="uid://xntlikd4glqf" path="res://assets/crosshair012.png" id="1_2x21x"]
+[ext_resource type="Script" path="res://scenes/crosshair.gd" id="1_ji4je"]
+[ext_resource type="AudioStream" uid="uid://3td7umf6gx34" path="res://assets/shotgun.mp3" id="3_fk64h"]
+[ext_resource type="AudioStream" uid="uid://bki3iim0bvbmf" path="res://assets/reload.mp3" id="4_o8tq7"]
+[ext_resource type="AudioStream" uid="uid://d0213tvtin5o3" path="res://assets/dead.mp3" id="5_p2hur"]
+[ext_resource type="PackedScene" uid="uid://b33tmij4qm4tx" path="res://scenes/ui.tscn" id="5_pq2yd"]
+[ext_resource type="AudioStream" uid="uid://bowjvi06yyoeu" path="res://assets/Through the Crossfire.mp3" id="7_irpjq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5c35t"]
+radius = 23.0
+
+[node name="Crosshair" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ji4je")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.1, 1.1)
+
+[node name="Crosshair" type="Sprite2D" parent="."]
+texture = ExtResource("1_2x21x")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_5c35t")
+
+[node name="ReloadTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="Shot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fk64h")
+
+[node name="Reload" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_o8tq7")
+
+[node name="Dead" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_p2hur")
+
+[node name="Reloading" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -84.0
+offset_top = -27.0
+offset_right = 8.0
+offset_bottom = -4.0
+scale = Vector2(2, 2)
+text = "RELOADING"
+
+[node name="UI" parent="." instance=ExtResource("5_pq2yd")]
+
+[node name="ColorRect2" type="ColorRect" parent="UI"]
+process_mode = 2
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.501961)
+
+[node name="Continue" type="Button" parent="UI/ColorRect2"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "CONTINUE"
+
+[node name="Spawntimer" type="Timer" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_irpjq")
+autoplay = true
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
+[connection signal="pressed" from="UI/ColorRect2/Continue" to="." method="_on_continue_pressed"]
+[connection signal="timeout" from="Spawntimer" to="." method="_on_spawntimer_timeout"]

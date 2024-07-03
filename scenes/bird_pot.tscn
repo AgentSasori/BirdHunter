@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxsbb4lr168sn"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_cs0uf"]
+[ext_resource type="Texture2D" uid="uid://cpb7dmnvu8rjn" path="res://assets/flying-bird-sheet.png" id="2_sbdfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfpgy"]
+atlas = ExtResource("2_sbdfc")
+region = Rect2(0, 119, 150, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg3ym"]
+atlas = ExtResource("2_sbdfc")
+region = Rect2(0, 0, 150, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dql4"]
+atlas = ExtResource("2_sbdfc")
+region = Rect2(0, 119, 150, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2odg"]
+atlas = ExtResource("2_sbdfc")
+region = Rect2(150, 119, 150, 119)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23mno"]
+atlas = ExtResource("2_sbdfc")
+region = Rect2(150, 0, 150, 119)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16pea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfpgy")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg3ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dql4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2odg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23mno")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_577ot"]
+radius = 49.8046
+
+[node name="PotBird" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_cs0uf")
+speed = 200
+points = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_16pea")
+animation = &"dead"
+frame_progress = 0.877044
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 2)
+shape = SubResource("CircleShape2D_577ot")

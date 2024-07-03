@@ -1,0 +1,53 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1719913903
+chickenshooter.png::CompressedTexture2D::467583928507233024::1719586400::1719668449::1::::<><>::
+export_presets.cfg::TextFile::-1::1719911902::0::1::::<><>::
+icon.svg::CompressedTexture2D::4936616050812693316::1719509778::1719668448::1::::<><>::
+::res://assets/::1719911166
+bd7iicjujqbu686jg6pd6r0217.png::CompressedTexture2D::5079197417239283861::1719842935::1719851742::1::::<><>::
+bird-hunter-logo.jpeg::CompressedTexture2D::5989094878746585048::1719837518::1719851742::1::::<><>::
+Chicken Hunt.mp3::AudioStreamMP3::9168060341043418749::1719754954::1719817395::1::::<><>::
+chicken-hunt-logo.jpeg::CompressedTexture2D::1526143659513652438::1719837682::1719851742::1::::<><>::
+clipart518949.png::CompressedTexture2D::4007045045040994934::1719842952::1719851742::1::::<><>::
+crosshair012.png::CompressedTexture2D::1642354016883193009::1719511470::1719668448::1::::<><>::
+dead.mp3::AudioStreamMP3::8971351016690047224::1719754882::1719817395::1::::<><>::
+flying-bird-blue.png::CompressedTexture2D::1759171914945076110::1719842960::1719851742::1::::<><>::
+flying-bird-brown.png::CompressedTexture2D::9205871712189051480::1719838627::1719851742::1::::<><>::
+flying-bird-brown_dead.png::CompressedTexture2D::559816087330225275::1719844042::1719851742::1::::<><>::
+flying-bird-green.png::CompressedTexture2D::8671331139755291902::1719842985::1719851742::1::::<><>::
+flying-bird-green_dead.png::CompressedTexture2D::1281140465750421434::1719907612::1719907625::1::::<><>::
+flying-bird-sheet.png::CompressedTexture2D::5829687352205835947::1719842998::1719851742::1::::<><>::
+flying-monster-green.png::CompressedTexture2D::1530853398289694510::1719843271::1719851742::1::::<><>::
+flying-monster-green_dead.png::CompressedTexture2D::5715223744424648074::1719911164::1719911166::1::::<><>::
+hiclipart.com.png::CompressedTexture2D::6610808019447200065::1719675201::1719746328::1::::<><>::
+layer_01_1920 x 1080.png::CompressedTexture2D::5583909143213399375::1719510694::1719668449::1::::<><>::
+layer_02_1920 x 1080.png::CompressedTexture2D::3035884176602364971::1719510694::1719668449::1::::<><>::
+layer_03_1920 x 1080.png::CompressedTexture2D::2398497636679309408::1719510694::1719668449::1::::<><>::
+layer_04_1920 x 1080.png::CompressedTexture2D::9217519159780849661::1719510694::1719668449::1::::<><>::
+layer_06_1920 x 1080.png::CompressedTexture2D::200504374237635851::1719510694::1719668449::1::::<><>::
+layer_07_1920 x 1080.png::CompressedTexture2D::4385502858433011828::1719510694::1719668449::1::::<><>::
+pinpng.com-sprite-png-1767703.png::CompressedTexture2D::7635581957393125300::1719843135::1719851742::1::::<><>::
+reload.mp3::AudioStreamMP3::3106538944117106297::1719590066::1719668448::1::::<><>::
+shotgun.mp3::AudioStreamMP3::2004751164848821361::1719589966::1719668448::1::::<><>::
+shotgun_shell_by_motoast_d4wkxlq-375w-2x.png::CompressedTexture2D::3846216526559305144::1719755824::1719817395::1::::<><>::
+Through the Crossfire.mp3::AudioStreamMP3::3415065220070211892::1719851402::1719906095::1::::<><>::
+::res://scenes/::1719911870
+bird_blue.tscn::PackedScene::8770167499905518346::1719907519::0::1::::<><>::res://scenes/enemy.gd<>uid://bxdbpgdqgdlic::::res://assets/clipart518949.png
+bird_fat.tscn::PackedScene::3538470432067283529::1719907519::0::1::::<><>::res://scenes/enemy.gd<>uid://0cfkl57vhisc::::res://assets/flying-bird-blue.png
+bird_green.tscn::PackedScene::6985113402221186254::1719907643::0::1::::<><>::res://scenes/enemy.gd<>uid://siugw6ewu41s::::res://assets/flying-bird-green_dead.png<>uid://dvsps64k8uwhi::::res://assets/flying-bird-green.png
+bird_grey.tscn::PackedScene::7722194143458482115::1719907519::0::1::::<><>::res://scenes/enemy.gd<>uid://dg1y6iw27pray::::res://assets/pinpng.com-sprite-png-1767703.png
+bird_koks.tscn::PackedScene::2345892149749056579::1719907518::0::1::::<><>::res://scenes/enemy.gd<>uid://h8gdbcwv3jg2::::res://assets/flying-bird-brown_dead.png<>uid://d4fnmkugbd11u::::res://assets/flying-bird-brown.png
+bird_monster.tscn::PackedScene::6890775907830151769::1719911727::0::1::::<><>::res://scenes/enemy.gd<>uid://cnoq5uqgv6i4i::::res://assets/flying-monster-green_dead.png<>uid://v2s6xf3m61rm::::res://assets/flying-monster-green.png
+bird_pot.tscn::PackedScene::4037986930706000109::1719907519::0::1::::<><>::res://scenes/enemy.gd<>uid://cpb7dmnvu8rjn::::res://assets/flying-bird-sheet.png
+bird_red.tscn::PackedScene::3969501376330887078::1719907519::0::1::::<><>::res://scenes/enemy.gd<>uid://cemnv0ejb1rcn::::res://assets/bd7iicjujqbu686jg6pd6r0217.png
+bonusbox.gd::GDScript::-1::1719864918::0::1::::<>RigidBody2D<>::
+bonusbox.tscn::PackedScene::4631390475412121622::1719864904::0::1::::<><>::uid://c1glbo21lu31n::::res://assets/hiclipart.com.png<>res://scenes/bonusbox.gd
+crosshair.gd::GDScript::-1::1719911727::0::1::::<>Control<>::
+crosshair.tscn::PackedScene::1862350204758565795::1719911727::0::1::::<><>::uid://xntlikd4glqf::::res://assets/crosshair012.png<>res://scenes/crosshair.gd<>uid://3td7umf6gx34::::res://assets/shotgun.mp3<>uid://bki3iim0bvbmf::::res://assets/reload.mp3<>uid://d0213tvtin5o3::::res://assets/dead.mp3<>uid://b33tmij4qm4tx::::res://scenes/ui.tscn<>uid://bowjvi06yyoeu::::res://assets/Through the Crossfire.mp3
+enemy.gd::GDScript::-1::1719909478::0::1::::<>Area2D<>::
+game.tscn::PackedScene::4447380715574849393::1719911727::0::1::::<><>::uid://1sevu7xf375x::::res://scenes/crosshair.tscn<>uid://b8n1ltvv7yqna::::res://scenes/parallax_background.tscn
+menu.gd::GDScript::-1::1719911663::0::1::::<>Node2D<>::
+menu.tscn::PackedScene::6678133627124369116::1719911870::0::1::::<><>::res://scenes/menu.gd<>uid://crlfruneu1hsi::::res://assets/bird-hunter-logo.jpeg<>uid://d3vcu5gjqrulp::::res://assets/Chicken Hunt.mp3<>uid://b8n1ltvv7yqna::::res://scenes/parallax_background.tscn
+parallax_background.tscn::PackedScene::4731088751478243098::1719907518::0::1::::<><>::uid://b3qmudumfr8ii::::res://assets/layer_07_1920 x 1080.png<>uid://c4ejpcw3tubb::::res://assets/layer_06_1920 x 1080.png<>uid://d4lbgudxa8ws0::::res://assets/layer_04_1920 x 1080.png<>uid://baf3516ylc3dk::::res://assets/layer_03_1920 x 1080.png<>uid://bjiutltx6kb7h::::res://assets/layer_02_1920 x 1080.png<>uid://cls5fx7ajk2wx::::res://assets/layer_01_1920 x 1080.png
+shotgun_shell.tscn::PackedScene::2802014131914433753::1719864904::0::1::::<><>::uid://bu2evhvv8hkku::::res://assets/shotgun_shell_by_motoast_d4wkxlq-375w-2x.png
+ui.tscn::PackedScene::4410686370490658513::1719907518::0::1::::<><>::

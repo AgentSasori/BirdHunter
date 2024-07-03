@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bowjvi06yyoeu"
+path="res://.godot/imported/Through the Crossfire.mp3-85508f39068b2c43995e8f7631598f07.mp3str"
+
+[deps]
+
+source_file="res://assets/Through the Crossfire.mp3"
+dest_files=["res://.godot/imported/Through the Crossfire.mp3-85508f39068b2c43995e8f7631598f07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

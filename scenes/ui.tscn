@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://b33tmij4qm4tx"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 60.0
+color = Color(0.462745, 0.462745, 0.462745, 0.541176)
+
+[node name="Points" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -23.0
+offset_right = 88.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "<POINTS>
+"
+
+[node name="Mag" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -25.0
+offset_right = -428.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "<MAG>"
+
+[node name="Ammo" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -25.0
+offset_right = -129.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+text = "<AMMO>"
+
+[node name="Kills" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -23.0
+offset_right = -112.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 8
+text = "<KILLS>
+"
+
+[node name="Birds" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -398.0
+offset_top = -23.0
+offset_right = -352.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 8
+text = "<BIRDS>"

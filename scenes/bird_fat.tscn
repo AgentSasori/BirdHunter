@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqocddig5j7vx"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_b0rm0"]
+[ext_resource type="Texture2D" uid="uid://0cfkl57vhisc" path="res://assets/flying-bird-blue.png" id="2_mgdxf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45yqr"]
+atlas = ExtResource("2_mgdxf")
+region = Rect2(0, 128, 150, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgsiw"]
+atlas = ExtResource("2_mgdxf")
+region = Rect2(0, 0, 150, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bhse"]
+atlas = ExtResource("2_mgdxf")
+region = Rect2(150, 0, 150, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnc6j"]
+atlas = ExtResource("2_mgdxf")
+region = Rect2(0, 128, 150, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk0uo"]
+atlas = ExtResource("2_mgdxf")
+region = Rect2(150, 128, 150, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16pea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45yqr")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgsiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bhse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnc6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk0uo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_85brs"]
+radius = 53.0094
+
+[node name="FatBird" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_b0rm0")
+speed = 200
+points = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_16pea")
+animation = &"dead"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 0)
+shape = SubResource("CircleShape2D_85brs")

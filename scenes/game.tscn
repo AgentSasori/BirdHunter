@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4mlyfqaqx6uv"]
+
+[ext_resource type="PackedScene" uid="uid://1sevu7xf375x" path="res://scenes/crosshair.tscn" id="1_8g8o8"]
+[ext_resource type="PackedScene" uid="uid://b8n1ltvv7yqna" path="res://scenes/parallax_background.tscn" id="2_1rdho"]
+
+[node name="game" type="Node2D"]
+
+[node name="Crosshair" parent="." instance=ExtResource("1_8g8o8")]
+offset_left = 960.0
+offset_top = 540.0
+offset_right = 960.0
+offset_bottom = 540.0
+script = null
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_1rdho")]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6rv2dtaya0x3"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_r0v1e"]
+[ext_resource type="Texture2D" uid="uid://siugw6ewu41s" path="res://assets/flying-bird-green_dead.png" id="2_pi0xs"]
+[ext_resource type="Texture2D" uid="uid://dvsps64k8uwhi" path="res://assets/flying-bird-green.png" id="3_k30fu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t6mx"]
+atlas = ExtResource("2_pi0xs")
+region = Rect2(0, 0, 150, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cpf6"]
+atlas = ExtResource("3_k30fu")
+region = Rect2(0, 0, 150, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70fre"]
+atlas = ExtResource("3_k30fu")
+region = Rect2(150, 0, 150, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24coy"]
+atlas = ExtResource("3_k30fu")
+region = Rect2(150, 146, 150, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h4yu"]
+atlas = ExtResource("3_k30fu")
+region = Rect2(0, 146, 150, 146)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16pea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t6mx")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cpf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70fre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24coy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h4yu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhikx"]
+radius = 49.5227
+
+[node name="GreenBird" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_r0v1e")
+speed = 200
+points = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_16pea")
+animation = &"dead"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_uhikx")

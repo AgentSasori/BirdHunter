@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://dw7lm3i1oa11o"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_vlyr5"]
+[ext_resource type="Texture2D" uid="uid://bxdbpgdqgdlic" path="res://assets/clipart518949.png" id="2_1fhfo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wabix"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(150, 100, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f4h4"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(0, 0, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juxc7"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(150, 0, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gdfi"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(300, 0, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ensh3"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(450, 0, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cgdv"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(0, 100, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2tev"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(150, 100, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8j3rm"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(300, 100, 150, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfcis"]
+atlas = ExtResource("2_1fhfo")
+region = Rect2(450, 100, 150, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16pea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wabix")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4f4h4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juxc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gdfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ensh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cgdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2tev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8j3rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfcis")
+}],
+"loop": true,
+"name": &"default",
+"speed": 13.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibno2"]
+size = Vector2(79, 69)
+
+[node name="BlueBird" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_vlyr5")
+speed = 200
+points = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_16pea")
+animation = &"dead"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, -1.5)
+shape = SubResource("RectangleShape2D_ibno2")

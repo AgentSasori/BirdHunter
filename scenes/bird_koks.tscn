@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://8omrbeasyen0"]
+
+[ext_resource type="Script" path="res://scenes/enemy.gd" id="1_fev53"]
+[ext_resource type="Texture2D" uid="uid://h8gdbcwv3jg2" path="res://assets/flying-bird-brown_dead.png" id="2_x5ovp"]
+[ext_resource type="Texture2D" uid="uid://d4fnmkugbd11u" path="res://assets/flying-bird-brown.png" id="3_3jsqa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbhep"]
+atlas = ExtResource("2_x5ovp")
+region = Rect2(0, 0, 150, 142)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqnij"]
+atlas = ExtResource("3_3jsqa")
+region = Rect2(0, 0, 150, 134)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rvnh"]
+atlas = ExtResource("3_3jsqa")
+region = Rect2(150, 0, 150, 134)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16pea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbhep")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqnij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rvnh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibno2"]
+size = Vector2(108, 73)
+
+[node name="KoksBird" type="Area2D" groups=["enemy"]]
+script = ExtResource("1_fev53")
+speed = 200
+points = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["enemy"]]
+sprite_frames = SubResource("SpriteFrames_16pea")
+animation = &"dead"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10, -1.5)
+shape = SubResource("RectangleShape2D_ibno2")

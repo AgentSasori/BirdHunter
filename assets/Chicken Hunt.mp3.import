@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3vcu5gjqrulp"
+path="res://.godot/imported/Chicken Hunt.mp3-85b07b06b51e615f1abbfcc38db7b4fa.mp3str"
+
+[deps]
+
+source_file="res://assets/Chicken Hunt.mp3"
+dest_files=["res://.godot/imported/Chicken Hunt.mp3-85b07b06b51e615f1abbfcc38db7b4fa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
